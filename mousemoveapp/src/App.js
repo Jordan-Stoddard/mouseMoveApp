@@ -21,13 +21,14 @@ class App extends Component {
       styleTwo: transform(e.clientX / e.clientY)
     });
   };
-  
+
   render() {
     return (
-      <div >
-        
-      </div>
-    );
+    <div onMouseMove={this.onMouseMove}>
+      <div className="panel" style={this.state.styleOne} />
+      <div className="panel" style={this.state.styleTwo} />
+    </div>
+    )
   }
 }
 
